@@ -1,5 +1,48 @@
 {% extends 'users/main.html' %}
 
 {% block content %}
-<h1>Hello</h1>
+<style>
+    /* About section styles */
+   .about {
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #cd5228;
+}
+</style>
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Welcome to Vantage Driving School - Your Path to Safe and Confident Driving!
+
+        At Vantage Driving School, we redefine the driving school experience, ensuring a seamless journey for every aspiring driver. We understand that learning to drive is a milestone moment, and we are here to make it an enriching and enjoyable adventure for you.
+        
+        Why Choose Vantage Driving School?
+        
+        Expert Instructors: Our team of experienced and certified instructors are dedicated to providing top-notch driving education. With a passion for road safety and a commitment to excellence, they'll guide you every step of the way.
+        
+        Tailored Training Programs: We believe in personalized learning. Our training programs are crafted to meet individual needs, ensuring that you progress at your own pace, building confidence behind the wheel.
+        
+        Cutting-edge Facilities: Equipped with state-of-the-art facilities, our modern training vehicles are designed to offer a comfortable and safe environment for your learning journey.
+        
+        Seamless Learning Experience: Our user-friendly online platform allows you to seamlessly manage your schedule, track your progress, and access resources, making your learning experience both convenient and efficient.
+        
+        Comprehensive Curriculum: From basic driving skills to advanced techniques, our comprehensive curriculum covers everything you need to become a skilled and responsible driver.
+        
+        What Sets Us Apart?
+        
+        Passion for Road Safety: At Vantage, we are not just a driving school; we are advocates for road safety. Our commitment goes beyond teaching you to drive – we aim to instill a sense of responsibility and awareness on the road.
+        
+        Community Engagement: We believe in giving back. Our community engagement initiatives focus on creating a positive impact, promoting safe driving habits, and supporting local causes.
+        
+        Success Stories: Join the ranks of successful drivers who started their journey with Vantage. Our success stories are a testament to our dedication to student success and road safety.
+        
+        Ready to Hit the Road?
+        
+        Whether you're a beginner or looking to refine your skills, Vantage Driving School is your partner on the road to becoming a confident and responsible driver. Join us, and let's turn your driving dreams into a reality!
+        
+        Embark on your journey with Vantage Driving School – Where Every Mile is a Milestone!
+        
+      </p>
+    <a href="{% url 'contactus' %}" class="btn">Learn More</a>
+  </section>
 {% endblock content %}

@@ -1,5 +1,44 @@
 {% extends 'users/main.html' %}
 
 {% block content %}
+<style>
+    /* courses.css */
+    .courses {
+        display: flex;
+        justify-content: space-between;
+    }
 
+    .course-card {
+        width: 48%;
+         /* Adjust the width as needed */
+        box-sizing: border-box; /* Include padding and border in the total width */
+        margin-bottom: 20px; /* Add margin between cards */
+    }
+
+    .course-card img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+        border-radius: 8px; /* Optional: Add rounded corners to the images */
+    }
+
+    .course-card h3 {
+        margin-top: 10px; /* Optional: Adjust the margin for the heading */
+    }
+</style>
+
+<section id="courses" class="courses">
+    
+    <div class="course-card">
+      <img src="../../static/images/image4.png" alt="Course 1 image">
+      <h3>Beginner's Course</h3>
+      <p>Perfect for first-time drivers</p>
+    </div>
+
+    <div class="course-card">
+      <img src="../../static/images/image3.jpg" alt="Course 2 image">
+      <h3>Advanced Course</h3>
+      <p>Take your driving skills to the next level</p>
+    </div>
+</section>
 {% endblock content %}
