@@ -1,5 +1,44 @@
 {% extends 'users/main.html' %}
 
 {% block content %}
+<section class="hero">
+    <div class="hero-content">
+      <h1>Learn to drive with confidence</h1>
+      <p>Get professional driving lessons tailored to your needs</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </section>
+  
+  <section id="courses" class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-card">
+      <img src="" alt="Course 1 image">
+      <h3>Beginner's Course</h3>
+      <p>Perfect for first-time drivers</p>
+    </div>
+    <div class="course-card">
+      <img src="" alt="Course 2 image">
+      <h3>Advanced Course</h3>
+      <p>Take your driving skills to the next level</p>
+    </div>
+  </section>
+  
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus imperdiet tortor id felis feugiat, 
+    eget lacinia lorem mattis. Maecenas blandit porta tincidunt.</p>
+    <a href="#contact" class="btn">Learn More</a>
+  </section>
+  
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
 
+  <footer>
 {% endblock content %}

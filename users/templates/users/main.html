@@ -8,8 +8,8 @@
 </head>
 <body>
     <!-- Navigation -->
-  <style>
-    /* Reset styles */
+<style>
+/* Reset styles */
     * {
   margin: 0;
   padding: 0;
@@ -63,7 +63,7 @@ nav ul li a:hover {
 /* Hero section styles */
 
 .hero {
-  background-image: url(' ../static/images/image5.png');
+  background-image: url(' ../../static/images/image5.png');
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -214,13 +214,13 @@ footer p {
   <header>
     <nav>
       <div class="logo">
-        <img src="../static/images/logo.png" alt="Vantage Driving School logo">
+        <img src="../../static/images/logo.png" alt="Vantage Driving School logo">
       </div>
       <ul>
         <li><a href="">Home</a></li>
         <li><a href="">Login</a></li>
         <li><a href="">Courses</a></li>
-        <li><a href="{% static 'aboutus.html' %}">About Us</a>  
+        <li><a href="{% url 'aboutus' %}">About Us</a>  
         <li><a href="">Contact Us</a></li>
       </ul>
     </nav>
