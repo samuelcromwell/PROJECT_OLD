@@ -1,4 +1,4 @@
-body{
+
   /* Add custom styles here */
   #home {
     background-image: url(' ../../static/images/image5.png'); /* Add your background image */
@@ -58,4 +58,3 @@ section {
   background-color: #343a40!important;
 }
     }
-}
