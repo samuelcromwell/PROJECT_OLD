@@ -22,18 +22,26 @@
         <li><a href="{% url 'login' %}">Login</a></li>
         <li><a href="{% url 'courses' %}">Courses</a></li>
         <li><a href="{% url 'aboutus' %}">About Us</a></li>  
-        <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+        
       </ul>
     </nav>
   </header>
-
   <section class="hero">
+
+    <div>
+      <div class="container">
+        {% if messages %}
+        {% for message in messages %}
+          <div class="alert alert-{{message.tags}}">{{message}}</div>
+        {% endfor %}
+      {% endif %}
+      </div>
   {% block content %}
-  <hr> 
-  
+ 
 
   {% endblock content %}
-  </hr>
+    </div>
+ 
 
 </section>
   <footer>

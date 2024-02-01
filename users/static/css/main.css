@@ -1,5 +1,4 @@
-    /* Reset styles */
-    * {
+      * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -48,6 +47,28 @@
       nav ul li a:hover {
         color: #ffffff;
       }
+
+      /* Add custom styles for message container */
+      .message-container {
+      background-color: #f8d7da; /* Example background color for error messages */
+      color: #721c24; /* Example text color for error messages */
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 20px; /* Adjust the margin as needed */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+.message {
+  margin-bottom: 10px;
+}
+
+      /* main.css */
+      .larger-container {
+       width: 70%; /* You can adjust the width as needed */
+      margin: 0 auto; /* Center the container */
+      padding: 20px; /* Add padding for spacing inside the container */
+      }
+
       
       /* Hero section styles */
       
