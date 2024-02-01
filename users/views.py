@@ -15,6 +15,8 @@ def login(request):
     return render(request, 'users/login.html')
 def courses(request):
     return render(request, 'users/courses.html')
+def traineelogin(request):
+    return render(request, 'users/traineelogin.html')
 def signup(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
