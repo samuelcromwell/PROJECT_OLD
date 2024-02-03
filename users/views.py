@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
-from . forms import UserRegisterForm
+from . forms import UserRegisterForm, UserLoginForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login
 
 
 def home(request):
@@ -15,8 +16,25 @@ def login(request):
     return render(request, 'users/login.html')
 def courses(request):
     return render(request, 'users/courses.html')
+
 def traineelogin(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        form = UserLoginForm(request.POST)
+        user = authenticate(request, email=email, password=password)
+
+        if user is not None:
+            login(request, user)
+            messages.success(request, 'Login successful.')
+            return redirect('aboutus')  
+        
+        else:
+            messages.error(request, 'Invalid email or password.')
+
     return render(request, 'users/traineelogin.html')
+
+   
 def signup(request):
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
@@ -29,9 +47,3 @@ def signup(request):
          form = UserRegisterForm()
 
     return render(request, 'users/signup.html', {'form': form})
-       
-    
-
-   
-
-# Create your views here.

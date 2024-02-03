@@ -1,6 +1,7 @@
 {% extends 'users/main.html' %}
 
 {% block content %}
+{% load static %}
 <style>
   body {
     margin: 0;
@@ -19,7 +20,7 @@
     text-align: center;
   }
 
-  .login-container input {
+  .login-container .input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -49,10 +50,12 @@
 <body>
 
 <div class="login-container">
-  <h1>Login</h1>
-  <form>
-    <input type="text" placeholder="Username" name="username" required>
-    <input type="password" placeholder="Password" name="password" required>
+  <form action="" method="post">    
+    {% csrf_token %}
+    {{ form.email }}
+
+    <input class="input" type="text" placeholder="Username" name="username" required>
+    <input class="input" type="password" placeholder="Password" name="password" required>
     <button type="submit">Login</button>
   </form>
   <a href="{% url 'signup' %}" class="signup-link">Don't have an account yet? Register Here</a>
